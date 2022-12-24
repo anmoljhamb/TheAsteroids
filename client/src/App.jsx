@@ -29,10 +29,10 @@ const App = () => {
      * todo Blog Post by Id
      *
      * * Common Components
-     * todo Navbar
+     * * Navbar
      * todo Header that has an image with parallax effect with a bunch of text on it.
-     * todo Footer
-     * todo add made with love by anmol
+     * * Footer
+     * * add made with love by anmol
      *
      * ! All the other components will be separated page wise in components folder.
      * ! All the style sheets in the style folder.
