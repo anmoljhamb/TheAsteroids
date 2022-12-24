@@ -1,4 +1,5 @@
 import React from "react";
+import "./style/App.scss";
 
 function App() {
     /**
@@ -11,6 +12,7 @@ function App() {
      * todo About Page
      * todo Explore page
      * todo Blog Page
+     * todo Blog Post by Id
      *
      * * Common Components
      * todo Navbar
@@ -19,7 +21,7 @@ function App() {
      * todo add made with love by anmol
      *
      * ! All the other components will be separated page wise in components folder.
-     *
+     * ! All the style sheets in the style folder.
      */
 
     return <h1>Hello World</h1>;
