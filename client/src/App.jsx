@@ -1,8 +1,10 @@
 import React from "react";
 import Navbar from "./components/common/Navbar";
 import "./style/App.scss";
+import { Routes, Route } from "react-router-dom";
+import Homepage from "./pages/HomePage";
 
-function App() {
+const App = () => {
     /**
      * App will be the single page application of react.
      * * It will have all the different routes.
@@ -30,6 +32,6 @@ function App() {
             <Navbar />
         </>
     );
-}
+};
 
 export default App;
