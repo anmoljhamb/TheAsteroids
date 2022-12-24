@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "./components/common/Navbar";
 import "./style/App.scss";
 
 function App() {
@@ -24,7 +25,11 @@ function App() {
      * ! All the style sheets in the style folder.
      */
 
-    return <h1>Hello World</h1>;
+    return (
+        <>
+            <Navbar />
+        </>
+    );
 }
 
 export default App;

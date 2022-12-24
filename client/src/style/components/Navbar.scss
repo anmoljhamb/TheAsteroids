@@ -1,0 +1,36 @@
+@import "../index.scss";
+
+.navbar__heading {
+    font-weight: bold;
+    font-size: 5rem;
+    color: $color4;
+}
+
+.navbar {
+    @include flex;
+    width: 100%;
+    min-height: 8rem;
+    background-color: $color4;
+    border-radius: $border_radius;
+    ul {
+        @include flex;
+        width: 100%;
+        font-size: 3.2rem;
+        li {
+            a {
+                margin: 0rem 1rem;
+                background-color: $color1;
+                padding: 1rem 4rem;
+                background-color: $color4;
+                border-radius: $border_radius;
+                color: $color1;
+                transition: $transition;
+                &:hover,
+                &.active {
+                    color: $color4;
+                    background-color: $color1;
+                }
+            }
+        }
+    }
+}
