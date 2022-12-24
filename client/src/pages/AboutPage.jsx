@@ -1,12 +1,16 @@
 import React from "react";
 import BgImageWithText from "../components/common/BgImageWithText";
-import "../style/pages/AboutPage.scss";
+import OurStory from "../components/AboutPage/OurStory";
 import AboutBgImage from "../images/aboutBgImage.jpg";
+import AboutBest from "../images/about_fun_facts.jpg";
+import "../style/pages/AboutPage.scss";
 
 const AboutPage = () => {
     return (
         <>
-            <BgImageWithText height="50rem" src={AboutBgImage} text="About" />
+            <BgImageWithText src={AboutBest} text="About" />
+            <OurStory />
+            <BgImageWithText src={AboutBgImage} text="Best Experience" />
         </>
     );
 };

@@ -8,11 +8,11 @@ const BgImageWithText = (props) => {
                 <div
                     className="bgImage"
                     style={{
-                        height: props.height,
                         backgroundImage: `url(${props.src})`,
                     }}
                 >
                     <h1 className="imageText">{props.text}</h1>
+                    {props.children}
                 </div>
             </div>
         </section>
