@@ -2,7 +2,10 @@ import React from "react";
 import Navbar from "./components/common/Navbar";
 import "./style/App.scss";
 import { Routes, Route } from "react-router-dom";
-import Homepage from "./pages/HomePage";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import BlogPage from "./pages/BlogPage";
+import ExplorePage from "./pages/ExplorePage";
 
 const App = () => {
     /**
@@ -30,6 +33,12 @@ const App = () => {
     return (
         <>
             <Navbar />
+            <Routes>
+                <Route exact path="/" element={<HomePage />}></Route>
+                <Route exact path="/about" element={<AboutPage />}></Route>
+                <Route exact path="/explore" element={<ExplorePage />}></Route>
+                <Route exact path="/blog" element={<BlogPage />}></Route>
+            </Routes>
         </>
     );
 };

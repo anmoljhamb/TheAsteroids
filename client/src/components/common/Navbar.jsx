@@ -1,7 +1,8 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "../../style/components/Navbar.scss";
 
-const Navbar = () => {
+const Navbar = (props) => {
     return (
         <>
             <section>
@@ -9,18 +10,18 @@ const Navbar = () => {
                 <div className="navbar">
                     <ul>
                         <li>
-                            <a className="active" href="/">
+                            <NavLink activeClassName="active" to="/">
                                 Home
-                            </a>
+                            </NavLink>
                         </li>
                         <li>
-                            <a href="/">About</a>
+                            <NavLink to="/about">About</NavLink>
                         </li>
                         <li>
-                            <a href="/">Blog</a>
+                            <NavLink to="/blog">Blog</NavLink>
                         </li>
                         <li>
-                            <a href="/">Explore</a>
+                            <NavLink to="/explore">Explore</NavLink>
                         </li>
                     </ul>
                 </div>
