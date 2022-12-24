@@ -1,10 +1,12 @@
 import React from "react";
+import BgImageWithText from "../components/common/BgImageWithText";
+import BlogImage from "../images/blog.jpg";
 import "../style/pages/BlogPage.scss";
 
 const BlogPage = () => {
     return (
         <>
-            <h1>BlogPage</h1>
+            <BgImageWithText src={BlogImage} text="Blog"></BgImageWithText>
         </>
     );
 };

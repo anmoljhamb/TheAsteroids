@@ -10,7 +10,10 @@ const AboutPage = () => {
         <>
             <BgImageWithText src={AboutBest} text="About" />
             <OurStory />
-            <BgImageWithText src={AboutBgImage} text="Best Experience" />
+            <BgImageWithText
+                src={AboutBgImage}
+                text="Get The Best Experience"
+            />
         </>
     );
 };

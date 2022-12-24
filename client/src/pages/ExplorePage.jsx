@@ -1,10 +1,15 @@
 import React from "react";
+import BgImageWithText from "../components/common/BgImageWithText";
+import ExploreImage from "../images/explore.jpg";
 import "../style/pages/ExplorePage.scss";
 
 const ExplorePage = () => {
     return (
         <>
-            <h1>ExplorePage</h1>
+            <BgImageWithText
+                src={ExploreImage}
+                text="Explore"
+            ></BgImageWithText>
         </>
     );
 };
