@@ -1,7 +1,15 @@
 import React from "react";
-import Navbar from "./components/common/Navbar";
+
 import "./style/App.scss";
 import { Routes, Route } from "react-router-dom";
+/**
+ * * Common Components
+ **/
+import Navbar from "./components/common/Navbar";
+import Footer from "./components/common/Footer";
+/**
+ * * Pages
+ **/
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import BlogPage from "./pages/BlogPage";
@@ -39,6 +47,7 @@ const App = () => {
                 <Route exact path="/explore" element={<ExplorePage />}></Route>
                 <Route exact path="/blog" element={<BlogPage />}></Route>
             </Routes>
+            <Footer />
         </>
     );
 };

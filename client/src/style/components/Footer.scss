@@ -1,0 +1,49 @@
+@import "../index.scss";
+
+.footer {
+    .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        gap: 1.5rem;
+        justify-content: center;
+        align-items: flex-start;
+        padding-bottom: 3rem;
+        .box {
+            a {
+                display: block;
+                font-size: 2.2rem;
+                color: $color4;
+                padding: 1rem 0;
+                &:hover {
+                    color: white;
+                }
+            }
+            &:first-child i {
+                margin-right: 1.7rem;
+            }
+            &:last-child i {
+                margin-left: 1.7rem;
+            }
+            &:first-child a {
+                text-align: left;
+            }
+            &:nth-child(2) a {
+                text-align: center;
+            }
+            &:last-child a {
+                text-align: right;
+            }
+        }
+    }
+    .credit {
+        border-radius: 0.5rem;
+        padding: 2rem;
+        text-align: center;
+        color: $color1;
+        background-color: $color4;
+        font-size: 2.2rem;
+        i {
+            color: $color1;
+        }
+    }
+}
