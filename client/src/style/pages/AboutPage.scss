@@ -36,6 +36,10 @@ $font-size: 3.2rem;
                 object-fit: cover;
             }
         }
+        .right {
+            @include flex;
+            flex-direction: column;
+        }
     }
 }
 
