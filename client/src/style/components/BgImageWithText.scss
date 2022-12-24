@@ -1,0 +1,35 @@
+@import "../index.scss";
+@import url("https://fonts.googleapis.com/css2?family=Rancho&display=swap");
+
+.container {
+    position: relative;
+}
+
+.bgImage {
+    @include flex;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    &::before {
+        @include beforeProp;
+        z-index: 5;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+        );
+    }
+}
+
+$font-size: 15rem;
+.imageText {
+    color: $color4;
+    z-index: 10;
+    font-family: "Rancho", cursive;
+    position: absolute;
+    font-size: $font-size;
+    top: calc(50% - $font-size);
+    left: calc(50% - $font-size);
+}
