@@ -41,7 +41,7 @@ router.post("/", async (req, res) => {
     }
 });
 
-router.post("/:id", async (req, res) => {
+router.patch("/:id", async (req, res) => {
     try {
         const place = await Place.findById(req.params.id).exec();
 
