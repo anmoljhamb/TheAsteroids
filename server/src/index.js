@@ -22,6 +22,22 @@ app.use(
 app.use("/place", placeRouter);
 app.use("/testimonial", testimonialRouter);
 
-app.listen(PORT, () => {
-    console.log(`Listening on the url: http://localhost:${PORT}`);
-});
+mongoose.set("strictQuery", false);
+mongoose
+    .connect(process.env.DB_URI)
+    .then(() => {
+        console.log("Database Connected.");
+        app.listen(PORT, () => {
+            console.log(`Listening on the url http://localhost:${PORT}`);
+        }).catch((err) => {
+            console.log(
+                `There was an error while listening to the server. Error: ${err}`
+            );
+        });
+    })
+    .catch((err) => {
+        console.log(
+            "There was an error while connecting to the database.",
+            err
+        );
+    });
