@@ -1,0 +1,63 @@
+@import "../index.scss";
+.featured {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color4;
+    padding: 2rem;
+    flex-direction: column;
+    * {
+        color: $color1;
+    }
+    h1 {
+        font-family: "Rancho", cursive;
+        font-size: 6.4rem;
+    }
+    .featuredPlace {
+        display: grid;
+        margin: 1rem 0rem;
+        padding: 0rem 2rem;
+        gap: 3rem;
+        grid-template-columns: repeat(3, 1fr);
+        position: relative;
+        .place {
+            border: $border;
+            width: 100%;
+            height: 30rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+            border-radius: $border-radius;
+            overflow: hidden;
+            .placeImage {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            &:hover .text {
+                transform: translateY(0rem);
+            }
+            .text {
+                width: 100%;
+                background-color: $color1;
+                color: $color4;
+                z-index: 10;
+                transform: translateY(calc(100% - 4rem));
+                transition: $transition;
+                h1 {
+                    font-size: 3.2rem;
+                }
+                p {
+                    font-size: 1.8rem;
+                }
+                * {
+                    color: $color4;
+                }
+            }
+        }
+    }
+}
