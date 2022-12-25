@@ -1,0 +1,86 @@
+@import "../index.scss";
+
+.contact .row {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.contact .row form {
+    flex: 1 1 40rem;
+    border: $border;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.contact .row .faq {
+    flex: 1 1 40rem;
+}
+
+.contact .row form h3 {
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    padding: 1.2rem;
+    color: $color1;
+    background-color: $color4;
+    font-size: 2.2rem * 2;
+    font-family: "Rancho", cursive;
+    text-transform: capitalize;
+}
+
+.contact .row form .box {
+    padding: 1rem 0;
+    margin: 1rem 0;
+    border-bottom: $border;
+    font-size: 1.8rem;
+    color: $color4;
+    background: $color1;
+    width: 100%;
+}
+
+.contact .row form .box::placeholder {
+    color: $color4;
+}
+
+.contact .row form textarea {
+    height: 15rem;
+    resize: none;
+}
+
+.contact .row .faq .title {
+    padding-bottom: 0.5rem;
+    font-size: 2.5rem * 2;
+    font-family: "Rancho", cursive;
+    color: $color4;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.contact .row .faq .box {
+    border-radius: 0.5rem;
+    border: $border;
+    margin-top: 2rem;
+}
+
+.contact .row .faq .box h3 {
+    background-color: $color4;
+    color: $color1;
+    padding: 1.5rem;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.contact .row .faq .box p {
+    padding: 1.5rem 2rem;
+    line-height: 2;
+    font-size: 1.6rem;
+    color: $color4;
+    display: none;
+}
+
+.contact .row .faq .box.active p {
+    display: inline-block;
+}

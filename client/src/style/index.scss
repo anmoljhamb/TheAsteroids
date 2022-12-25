@@ -7,6 +7,7 @@ $color3: #ade792;
 $color4: #f3ecb0;
 $border_radius: 1rem;
 $transition: 0.2s linear all;
+$border: 0.1rem solid rgba(220, 198, 156, 0.3);
 
 @mixin flex {
     display: flex;
@@ -57,4 +58,53 @@ section {
     overflow: hidden;
     padding: 1rem;
     border: 0.2rem solid $color2;
+}
+
+.btn {
+    display: inline-block;
+    cursor: pointer;
+    padding: 1rem 3rem;
+    border: $border;
+    font-size: 1.8rem;
+    color: $color4;
+    text-align: center;
+    text-transform: capitalize;
+    transition: $transition;
+    margin-top: 1rem;
+    background-color: $color1;
+}
+
+.btn:hover {
+    border-radius: 5rem;
+    background-color: $color4;
+    color: $color1;
+}
+
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+*::selection {
+    background-color: var(--sub-color);
+    color: var(--main-color);
+}
+
+*::-webkit-scrollbar {
+    height: 0.5rem;
+    width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--sub-color);
+    border-radius: 5rem;
 }

@@ -11,6 +11,7 @@ import Footer from "./components/common/Footer";
  * * Pages
  **/
 import HomePage from "./pages/HomePage";
+import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
 import BlogPage from "./pages/BlogPage";
 import ExplorePage from "./pages/ExplorePage";
@@ -44,6 +45,7 @@ const App = () => {
             <Routes>
                 <Route exact path="/" element={<HomePage />}></Route>
                 <Route exact path="/about" element={<AboutPage />}></Route>
+                <Route exact path="/contact" element={<ContactPage />}></Route>
                 <Route exact path="/explore" element={<ExplorePage />}></Route>
                 <Route exact path="/blog" element={<BlogPage />}></Route>
             </Routes>

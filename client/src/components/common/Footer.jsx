@@ -43,7 +43,7 @@ const Footer = () => {
             </div>
 
             <div className="credit">
-                Made With <i class="fa-solid fa-heart"></i> by Anmol Jhamb
+                Made With <i className="fa-solid fa-heart"></i> by Anmol Jhamb
             </div>
         </section>
     );
