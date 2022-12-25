@@ -24,14 +24,15 @@ const App = () => {
      *
      * * Pages to make
      * todo HomePage
-     * todo About Page
+     * * About Page
+     * * Contact Page
      * todo Explore page
      * todo Blog Page
      * todo Blog Post by Id
      *
      * * Common Components
      * * Navbar
-     * todo Header that has an image with parallax effect with a bunch of text on it.
+     * * Header that has an image with parallax effect with a bunch of text on it.
      * * Footer
      * * add made with love by anmol
      *
