@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import BgImageWithText from "../components/common/BgImageWithText";
-import Place from "../components/ExplorePage/Place";
+import Places from "../components/common/Places";
 import ExploreImage from "../images/explore.jpg";
 import "../style/pages/ExplorePage.scss";
 
@@ -15,19 +15,6 @@ const ExplorePage = () => {
         });
     }, []);
 
-    const Places = () => {
-        return places.map((place) => {
-            return (
-                <Place
-                    key={place._id}
-                    name={place.name}
-                    image={place.images[0]}
-                    fact={place.fact}
-                ></Place>
-            );
-        });
-    };
-
     return (
         <>
             <BgImageWithText
@@ -36,7 +23,7 @@ const ExplorePage = () => {
             ></BgImageWithText>
             <section>
                 <div className="places">
-                    <Places></Places>
+                    <Places compPlaces={places}></Places>
                 </div>
             </section>
         </>

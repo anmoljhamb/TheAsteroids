@@ -7,6 +7,11 @@ const BlogPage = () => {
     return (
         <>
             <BgImageWithText src={BlogImage} text="Blog"></BgImageWithText>
+            <section>
+                <div className="blogContainer">
+                    <h1>Checkout Our Blog Posts</h1>
+                </div>
+            </section>
         </>
     );
 };
