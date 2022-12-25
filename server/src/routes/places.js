@@ -22,6 +22,15 @@ router.get("/", async (req, res) => {
     }
 });
 
+router.get("/featured", async (req, res) => {
+    try {
+        const places = await Place.find({ featured: true }).exec();
+        res.status(200).json(places);
+    } catch (err) {
+        errorResponse(res, err);
+    }
+});
+
 router.get("/:id", async (req, res) => {
     const place = await Place.findById(req.params.id).exec();
     console.log(place);
@@ -29,15 +38,6 @@ router.get("/:id", async (req, res) => {
         res.status(200).json({
             place,
         });
-    } catch (err) {
-        errorResponse(res, err);
-    }
-});
-
-router.get("/featured", async (req, res) => {
-    try {
-        const places = await Place.find({ featured: true }).exec();
-        res.status(200).json(places);
     } catch (err) {
         errorResponse(res, err);
     }

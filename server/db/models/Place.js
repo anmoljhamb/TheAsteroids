@@ -25,6 +25,7 @@ const placeSchema = new Schema({
     },
     featured: {
         type: Boolean,
+        required: true,
     },
 });
 
