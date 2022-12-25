@@ -1,0 +1,42 @@
+@import "../index.scss";
+
+.blogPost {
+    background-color: $color4;
+    border-radius: $border-radius;
+    padding: 1rem;
+    * {
+        color: $color1;
+    }
+    h1 {
+        font-family: "Rancho", cursive;
+        font-size: 6.4rem;
+    }
+    .blogContent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3.2rem;
+        margin: 2rem;
+        div {
+            width: 100%;
+            overflow: hidden;
+            margin: 0rem 2rem;
+        }
+        .contentImage {
+            overflow: hidden;
+            height: 40rem;
+            border-radius: $border-radius;
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .contentText {
+            height: 100%;
+        }
+        &:nth-child(2n + 1) {
+            flex-direction: row-reverse;
+        }
+    }
+}
