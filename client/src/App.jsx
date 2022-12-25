@@ -24,12 +24,12 @@ const App = () => {
      * * App Routes the front end. i.e,
      *
      * * Pages to make
-     * todo HomePage
+     * * HomePage
      * * About Page
      * * Contact Page
-     * todo Explore page
-     * todo Blog Page
-     * todo Blog Post by Id
+     * * Explore page
+     * * Blog Page
+     * * Blog Post by Id
      *
      * * Common Components
      * * Navbar
