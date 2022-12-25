@@ -6,15 +6,19 @@ const express = require("express");
 const router = express.Router();
 const Place = require("../../db/models/Place");
 
+const errorResponse = (res, err, code = 400) => {
+    res.status(code).json({
+        message: "There was an error while fetching places",
+        err,
+    });
+};
+
 router.get("/", async (req, res) => {
     try {
         const places = await Place.find().exec();
         res.status(200).json({ places });
     } catch (err) {
-        res.status(500).json({
-            message: "There was an error while fetching places",
-            err,
-        });
+        errorResponse(res, err, 500);
     }
 });
 
@@ -23,10 +27,7 @@ router.get("/featured", async (req, res) => {
         const places = await Place.find({ featured: true }).exec();
         res.status(200).json(places);
     } catch (err) {
-        res.status(400).json({
-            message: "There was an error while fetching places",
-            err,
-        });
+        errorResponse(res, err);
     }
 });
 
@@ -36,10 +37,23 @@ router.post("/", async (req, res) => {
         await place.save();
         res.status(200).json(place);
     } catch (err) {
-        res.status(400).json({
-            message: "Bad Request. Please check the data once again.",
-            err,
-        });
+        errorResponse(res, err);
+    }
+});
+
+router.post("/:id", async (req, res) => {
+    try {
+        const place = await Place.findById(req.params.id).exec();
+
+        // console.log(place);
+        console.log(req.body.place);
+        place.featured = true;
+        place.set({ ...req.body.place });
+        await place.save();
+        console.log(place);
+        res.status(200).json(place);
+    } catch (err) {
+        errorResponse(res, err);
     }
 });
 
@@ -53,10 +67,7 @@ router.delete("/:id", async (req, res) => {
             message: "Delete was successful.",
         });
     } catch (err) {
-        res.status(400).json({
-            message: "There was an error while deleting the record.",
-            err,
-        });
+        errorResponse(res, err);
     }
 });
 
