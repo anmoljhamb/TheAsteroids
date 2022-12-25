@@ -7,6 +7,7 @@ const router = express.Router();
 const nodemailer = require("nodemailer");
 
 router.post("/", async (req, res) => {
+    console.log(req.body);
     var transporter = nodemailer.createTransport({
         service: process.env.EMAIL_SERVICE,
         auth: {
