@@ -5,6 +5,7 @@ const cors = require("cors");
 const app = express();
 const path = require("path");
 const placeRouter = require("./routes/places");
+const contactRouter = require("./routes/contact");
 const testimonialRouter = require("./routes/testimonials");
 require("dotenv").config({ path: path.join(__dirname, "..", "config.env") });
 
@@ -21,6 +22,7 @@ app.use(express.json());
 
 app.use("/place", placeRouter);
 app.use("/testimonial", testimonialRouter);
+app.use("/contact", contactRouter);
 
 mongoose.set("strictQuery", false);
 mongoose
