@@ -47,7 +47,6 @@ router.patch("/:id", async (req, res) => {
 
         // console.log(place);
         console.log(req.body.place);
-        place.featured = true;
         place.set({ ...req.body.place });
         await place.save();
         console.log(place);

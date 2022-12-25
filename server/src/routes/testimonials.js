@@ -38,7 +38,6 @@ router.patch("/:id", async (req, res) => {
 
         // console.log(testimonial);
         console.log(req.body.testimonial);
-        testimonial.featured = true;
         testimonial.set({ ...req.body.testimonial });
         await testimonial.save();
         console.log(testimonial);
