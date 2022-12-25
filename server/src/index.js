@@ -29,10 +29,6 @@ mongoose
         console.log("Database Connected.");
         app.listen(PORT, () => {
             console.log(`Listening on the url http://localhost:${PORT}`);
-        }).catch((err) => {
-            console.log(
-                `There was an error while listening to the server. Error: ${err}`
-            );
         });
     })
     .catch((err) => {
