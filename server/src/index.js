@@ -14,11 +14,11 @@ console.log(PORT);
 
 app.use(morgan("dev")); // Logging
 app.use(express.json());
-// app.use(
-//     cors({
-//         origin: process.env.FRONT_END_URI, // allow for cross origin
-//     })
-// );
+app.use(
+    cors({
+        origin: process.env.FRONT_END_URI, // allow for cross origin
+    })
+);
 
 app.use("/place", placeRouter);
 app.use("/testimonial", testimonialRouter);
