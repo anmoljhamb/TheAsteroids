@@ -15,6 +15,7 @@ import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
 import BlogPage from "./pages/BlogPage";
 import ExplorePage from "./pages/ExplorePage";
+import Blog from "./pages/Blog";
 
 const App = () => {
     /**
@@ -49,6 +50,7 @@ const App = () => {
                 <Route exact path="/contact" element={<ContactPage />}></Route>
                 <Route exact path="/explore" element={<ExplorePage />}></Route>
                 <Route exact path="/blog" element={<BlogPage />}></Route>
+                <Route exact path="/blog/:blogId" element={<Blog />}></Route>
             </Routes>
             <Footer />
         </>

@@ -6,6 +6,7 @@ const Places = ({ compPlaces }) => {
         return (
             <Place
                 key={place._id}
+                id={place._id}
                 name={place.name}
                 image={place.images[0]}
                 fact={place.fact}
