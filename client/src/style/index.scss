@@ -1,28 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rancho&display=swap");
-
-$color1: #344d67;
-$color2: #6eccaf;
-$color3: #ade792;
-$color4: #f3ecb0;
-$border_radius: 1rem;
-$transition: 0.2s linear all;
-$border: 0.1rem solid rgba(220, 198, 156, 0.3);
-
-@mixin flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@mixin beforeProp {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    content: "";
-    top: 0;
-    left: 0;
-}
+@import "./variables.scss";
 
 * {
     margin: 0;
