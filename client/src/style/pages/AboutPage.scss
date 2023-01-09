@@ -1,6 +1,6 @@
 @import "../variables.scss";
 
-$font-size: 3.2rem;
+$font-size: 2.5rem;
 
 .our_story {
     background-color: $color4;
@@ -19,8 +19,12 @@ $font-size: 3.2rem;
         @include flex;
         padding: 2rem;
         gap: 1rem;
-        flex-flow: row wrap;
-        & div {
+        flex-flow: row nowrap;
+        @media only screen and (max-width: 850px) {
+            flex-flow: column nowrap;
+        }
+        div {
+            flex-basis: 100%;
             width: 100%;
             height: 100%;
         }
