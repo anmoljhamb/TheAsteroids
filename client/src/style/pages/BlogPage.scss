@@ -15,6 +15,9 @@
         gap: 3rem;
         grid-template-columns: repeat(3, 1fr);
         position: relative;
+        @media only screen and (max-width: 700px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
         .place {
             border: $border;
             width: 100%;
