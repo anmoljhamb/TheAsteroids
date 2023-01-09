@@ -43,7 +43,8 @@ const Footer = () => {
             </div>
 
             <div className="credit">
-                Made With <i className="fa-solid fa-heart"></i> by Anmol Jhamb
+                Made With <i className="fa-solid fa-heart"></i> by{" "}
+                <a href="https://anmoljhamb.vercel.app">Anmol Jhamb</a>
             </div>
         </section>
     );
