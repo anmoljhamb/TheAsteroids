@@ -16,7 +16,7 @@
     ul {
         @include flex;
         width: 100%;
-        font-size: 3.2rem;
+        font-size: 2.2rem;
         li {
             a {
                 margin: 0rem 1rem;
@@ -30,6 +30,10 @@
                 &.active {
                     color: $color4;
                     background-color: $color1;
+                }
+                @media only screen and (max-width: 650px) {
+                    margin-right: 0.5rem;
+                    padding: 1rem 2rem;
                 }
             }
         }
